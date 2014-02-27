@@ -7,6 +7,10 @@ get '/new' do
   erb :new
 end
 
+get '/new_photo' do
+  erb :new_photo
+end
+
 post '/' do
   puts request.body.read
   user = User.new(params[:user])
