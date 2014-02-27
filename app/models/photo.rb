@@ -1,3 +1,4 @@
 class Photo < ActiveRecord::Base
-  # Remember to create a migration!
+  mount_uploader :photo, PhotoUploader
+  belongs_to :album
 end

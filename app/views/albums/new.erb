@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Create an album:</h2>
+  <form action="/albums/new" method="POST">
+    <label>Album: <input type="text" name="title"></label>
+    <input type="hidden" name="album[user_id]" value="<%= @user.id %>">
+    <br>
+    <input type="submit">
+  </form>
+</div>
