@@ -12,7 +12,7 @@ end
 post "/albums/new" do
   @album = Album.new(params[:album])
   if @album.save
-  	redirect to "/albums/#{{albums.id}}"
+  	redirect to "/albums/#{albums.id}"
   else
   	redirect to "/albums/new"
   end
