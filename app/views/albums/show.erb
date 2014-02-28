@@ -1,3 +1,9 @@
-<h1> <%= @album.title %></h1>
-<% @photos.each do |photo| %>
-	<img src="<%= photo.name %>">
+<h1><%= @album.title %></h1>
+<a href="/photo/new/<%= @album.id %>" class="button">Add Photo</a>
+<div class="row">
+  <% @photos.each do |photo| %>
+    <div>
+      <img src="<%= photo.photo %>" alt="photo-id-<%= photo.id %>">
+    </div>
+  <% end %>
+</div>

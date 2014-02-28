@@ -1,8 +1,9 @@
 <div class="container">
+  <p>You are: <%= @user %></p>
   <form enctype="multipart/form-data" action="/photos/new" method="POST">
-    <label>Album: <input type="text" name="title"></label>
+    <label>Album: <input type="text" name="photo[album_id]"></label>
     <br>
-    <label>Photo: <input type="file" name="user[photo]"></label>
+    <label>Photo: <input type="file" name="photo[name]"></label>
     <br>
     <input type="submit">
   </form>
