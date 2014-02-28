@@ -1,10 +1,7 @@
 <div class="container">
   <p>You are: <%= @user %></p>
-  <form enctype="multipart/form-data" action="/photos/new" method="POST">
-    <label>Album: <input type="text" name="photo[album_id]"></label>
-    <br>
-    <label>Photo: <input type="file" name="photo[name]"></label>
-    <br>
-    <input type="submit">
+  <form class="form" enctype="multipart/form-data" action="/photos/new/<%= params[:album_id] %>" method="POST">
+	<label>Image<input type="file" accept="image/*" name="photo"></label>
+	<input type="submit" value="Add photo" class="button">
   </form>
 </div>

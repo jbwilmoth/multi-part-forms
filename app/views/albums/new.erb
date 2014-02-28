@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Create an album:</h2>
-  <form class="form" enctype="multipart/form-data" action="/album/new" method="POST">
-	<input type="text" placeholder="Album Title" name="title">
-	<label>Cover Image<input type="file" accept="image/*" name="photo"></label>
+  <form class="form" enctype="multipart/form-data" action="/albums/new" method="POST">
+	<input type="text" placeholder="Album Title" name="album[title]">
+	<input type="hidden" name="album[user_id]" value="<%= @user.id%>">
 	<input type="submit" value="Create Album" class="button">
   </form>
 </div>

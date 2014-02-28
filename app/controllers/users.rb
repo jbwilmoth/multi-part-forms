@@ -1,7 +1,7 @@
 get '/' do
   # render home page
   @users = User.all
-  @photos = Photo.all
+  @photos = Photo.first
   erb :index
 end
 
